@@ -1,0 +1,21 @@
+Response ID,Age Group,Primary Health Concern,Access Barrier,Program Awareness,Satisfaction (1-5),Unmet Need,Suggested Priority,Language Preference,Insurance Status
+R001,45-54,Diabetes,Cost,Yes,3,More evening hours,Diabetes classes,English,Uninsured
+R002,25-34,Mental Health,Wait times,No,1,Immediate counseling,Mental health,English,Medicaid
+R003,55-64,Hypertension,Transportation,Yes,4,Home visits,Hypertension,English,Medicare
+R004,35-44,Diabetes,Language barrier,No,2,Spanish-speaking staff,Diabetes management,Spanish,Uninsured
+R005,15-24,Mental Health,Stigma,No,2,Teen-specific programs,Youth mental health,English,Uninsured
+R006,25-34,Maternal Health,Cost,Yes,5,Postpartum support,Maternal health,Spanish,Medicaid
+R007,45-54,Hypertension,Wait times,Yes,3,Faster appointments,Hypertension,English,Private
+R008,55-64,Diabetes,Transportation,Yes,4,Mobile clinic,Diabetes,English,Medicare
+R009,35-44,Mental Health,Cost,No,1,Affordable therapy,Mental health,English,Uninsured
+R010,25-34,Maternal Health,Language barrier,Yes,4,More bilingual staff,Maternal/prenatal,Spanish,Medicaid
+R011,45-54,Diabetes,Cost,Yes,2,Medication assistance,Diabetes,English,Uninsured
+R012,15-24,Mental Health,Stigma,No,1,Anonymous services,Mental health,English,Uninsured
+R013,65+,Hypertension,Transportation,Yes,4,Home BP monitoring,Hypertension,English,Medicare
+R014,35-44,Diabetes,Work schedule,Yes,3,Weekend hours,Diabetes,English,Private
+R015,25-34,Mental Health,Wait times,No,1,Same-day crisis,Mental health,English,Medicaid
+R016,55-64,Hypertension,Cost,Yes,3,Generic medications,Hypertension,English,Uninsured
+R017,35-44,Maternal Health,Cost,No,3,Free prenatal classes,Maternal health,Spanish,Uninsured
+R018,45-54,Diabetes,Language barrier,No,2,Bilingual educator,Diabetes,Spanish,Uninsured
+R019,25-34,Mental Health,Wait times,No,1,Reduce wait list,Mental health,English,Medicaid
+R020,65+,Hypertension,Transportation,Yes,5,Telehealth option,Hypertension,English,Medicare

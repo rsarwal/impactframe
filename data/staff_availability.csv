@@ -1,0 +1,12 @@
+Staff ID,Name,Role,Program Area,FTE Available,Current Utilization (%),Specialized Certifications,Bilingual,Burnout Risk,Notes
+S001,Maria Chen,Diabetes Educator,Diabetes Management,1.0,112,CDE; CPR,Spanish,HIGH,Covering 2 vacant positions; requested reduced hours
+S002,James Okafor,RN Care Coordinator,Diabetes Management,1.0,98,RN; Case Management,No,MEDIUM,Handles complex cases; strong patient outcomes
+S003,Rosa Mendez,Community Health Worker,Diabetes Management,0.5,105,CHW Certification,Spanish; Portuguese,HIGH,Only bilingual CHW for diabetes; overwhelmed
+S004,David Kim,Hypertension Specialist,Hypertension Control,1.0,88,NP; Cardiology,Korean,LOW,Capacity for 15% more patients
+S005,Angela Torres,RN,Hypertension Control,1.0,94,RN; Phlebotomy,Spanish,MEDIUM,Efficient; good patient satisfaction scores
+S006,Patricia Williams,Midwife,Maternal Health,1.0,102,CNM; Lactation Consultant,No,MEDIUM,Only certified midwife on staff; critical role
+S007,Sung-Ji Park,OB/GYN Nurse,Maternal Health,1.0,91,RN; OB Certification,Korean,LOW,Strong outcomes for high-risk cases
+S008,Kevin Barnes,Social Worker,Maternal Health,0.5,78,MSW; Child Welfare,No,LOW,Under-utilized; could expand to mental health
+S009,Linda Osei,Mental Health Counselor,Mental Health,1.0,134,LCSW; Trauma-Informed,No,CRITICAL,Severely overloaded; 6-week wait list
+S010,Marcus Webb,Substance Use Counselor,Mental Health,1.0,118,CADC; Motivational Interviewing,No,HIGH,Handles dual-diagnosis; needs support staff
+S011,Carmen Rivera,Outreach Coordinator,Community Outreach,1.0,95,CHW; Health Education,Spanish,LOW,Strong community relationships; effective

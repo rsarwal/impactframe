@@ -1,0 +1,9 @@
+Program Area,Condition,Estimated Population Affected,Prevalence Rate (%),ER Visits (Last Year),Hospitalizations,Mortality Rate (per 1000),Uninsured Rate (%),High Risk Subgroups
+Diabetes Management,Type 2 Diabetes,4200,18.3,312,87,4.2,34,Adults 45-64; Hispanic/Latino community; Low income households
+Hypertension Control,Hypertension,5800,25.1,198,54,2.1,28,Adults 55+; African American community; Smokers
+Maternal Health,Prenatal/Postnatal Care,820,3.6,67,42,1.8,41,Teen mothers; Single-parent households; Uninsured
+Mental Health,Depression/Anxiety,3100,13.4,445,112,0.9,52,Youth 15-24; Veterans; Homeless population
+Diabetes Management,Pre-diabetes,6100,26.4,89,12,0.4,38,Adults 35-54; Overweight BMI 25-30
+Hypertension Control,Cardiovascular Risk,2900,12.6,276,98,5.8,31,Adults 65+; Diabetic patients; Chronic stress
+Maternal Health,High-Risk Pregnancy,210,0.9,134,98,3.2,45,Age 35+; Multiple pregnancies; Pre-existing conditions
+Mental Health,Substance Use,1400,6.1,389,76,2.4,61,Adults 18-35; Homeless; Co-occurring mental illness

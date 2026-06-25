@@ -1,0 +1,17 @@
+# Environment — never upload your API key
+.env
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Output files (too large)
+output/latest_results.json
+
+# Windows
+Thumbs.db
+desktop.ini
+
+# VS Code
+.vscode/

@@ -1,0 +1,94 @@
+COMMUNITY HEALTH CLINIC — ANNUAL PROGRAM EFFECTIVENESS REPORT
+Fiscal Year 2024-2025 | Prepared by: Quality Improvement Department
+
+EXECUTIVE SUMMARY
+This report evaluates program performance across four core service areas. Overall clinic performance shows mixed results, with significant variation in cost-effectiveness and outcomes across programs. Budget constraints have impacted service delivery, particularly in mental health where demand continues to outpace capacity.
+
+---
+
+DIABETES MANAGEMENT PROGRAM
+
+Outcomes:
+- A1C reduction achieved in 68% of enrolled patients (target: 70%)
+- 312 ER visits attributed to diabetes complications (14% reduction from prior year)
+- Patient enrollment: 847 active patients (capacity: 800 — over capacity)
+- Diabetes education class completion rate: 54% (target: 75%)
+
+Cost-Effectiveness:
+- Cost per patient per year: $496
+- Estimated ER avoidance savings: $234,000
+- ROI ratio: 1.8x (every $1 invested saves $1.80 in downstream costs)
+- Program is BELOW target on completion rates due to language access gaps
+
+Key Finding: Spanish-speaking patient outcomes are 23% worse than English-speaking patients due to single bilingual staff member. Critical staffing gap.
+
+---
+
+HYPERTENSION CONTROL PROGRAM
+
+Outcomes:
+- Blood pressure control achieved in 74% of enrolled patients (target: 72%) — EXCEEDS TARGET
+- 198 ER visits attributed to hypertension (22% reduction from prior year)
+- Patient enrollment: 612 active patients (capacity: 650 — under capacity)
+- Medication adherence rate: 81% (target: 75%) — EXCEEDS TARGET
+
+Cost-Effectiveness:
+- Cost per patient per year: $506
+- Estimated ER avoidance savings: $297,000
+- ROI ratio: 2.4x — HIGHEST in clinic
+- Program is performing well; has capacity for growth
+
+Key Finding: Telehealth pilot (Q3-Q4) showed 31% improvement in appointment adherence for elderly patients. Expansion recommended.
+
+---
+
+MATERNAL HEALTH PROGRAM
+
+Outcomes:
+- Full prenatal care completion: 71% (target: 80%) — BELOW TARGET
+- Low birth weight rate: 8.2% (county average: 9.1%) — performing above county average
+- Postpartum depression screening completion: 63% (target: 90%) — SIGNIFICANTLY BELOW TARGET
+- High-risk pregnancy complications: 18% lower than county average
+
+Cost-Effectiveness:
+- Cost per patient per year: $348
+- Estimated downstream savings (NICU avoidance, complications): $412,000
+- ROI ratio: 2.1x
+- Postpartum services critically underfunded
+
+Key Finding: Postpartum care gap is significant. Patients are falling off after delivery. Single midwife is a single point of failure for the entire program.
+
+---
+
+MENTAL HEALTH PROGRAM
+
+Outcomes:
+- Patients served: 389 (capacity: 250 — 56% OVER CAPACITY)
+- Average wait time for first appointment: 6.2 weeks (target: 2 weeks)
+- Treatment completion rate: 41% (target: 65%) — SIGNIFICANTLY BELOW TARGET
+- Crisis intervention calls: 127 (38% increase from prior year)
+- Patient satisfaction: 2.1/5 — LOWEST in clinic
+
+Cost-Effectiveness:
+- Cost per patient per year: $501
+- Unmet demand estimate: 400+ patients on informal waiting list
+- ROI ratio: 0.9x (below break-even due to capacity constraints and drop-offs)
+- NOTE: ROI calculation does not capture long-term social cost avoidance
+
+Key Finding: Mental health is the most underfunded program relative to demonstrated community need. Low ROI is a capacity problem, not a program quality problem. Staff burnout is at critical levels — risk of losing both counselors within 12 months without intervention.
+
+---
+
+CROSS-PROGRAM FINDINGS
+
+1. Language access is a clinic-wide gap affecting outcomes in all programs.
+2. Transportation is the #1 cited access barrier across all programs.
+3. Mental health unmet need is growing at 15% annually.
+4. Hypertension program has the strongest ROI and room to grow.
+5. Single points of failure exist in Maternal Health (midwife) and Diabetes (bilingual CHW).
+
+RECOMMENDED BUDGET PRIORITY ORDER (QI Department perspective):
+1. Mental Health — urgent capacity expansion
+2. Diabetes Management — bilingual staff addition
+3. Maternal Health — postpartum program expansion
+4. Hypertension — telehealth expansion (already performing well)
