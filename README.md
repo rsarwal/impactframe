@@ -1,4 +1,6 @@
-# ImpactFrame 🏥
+# ImpactFrame 
+<img width="1719" height="915" alt="image" src="https://github.com/user-attachments/assets/9408e488-0f06-405d-98e2-3e3fadd900a9" />
+
 
 **AI-powered Resource Allocation Intelligence for Community Health Clinics**
 
