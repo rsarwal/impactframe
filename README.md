@@ -1,4 +1,4 @@
-<img src="assets/logo.png" width="350"/>
+<img src="assets/logo.png" width="500"/>
 # ImpactFrame
 
 **Kaggle AI Agents Intensive 2026 — Agents for Good**
