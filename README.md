@@ -1,6 +1,10 @@
-<img src="assets/logo.png" width="400" style="vertical-align:middle"/> &nbsp; &nbsp; **ImpactFrame**
+<p align="left">
+  <img src="assets/logo.png" width="400">
+</p>
 
-**Kaggle AI Agents Intensive 2026 — Agents for Good**
+<h1>ImpactFrame</h1>
+
+<b>Kaggle AI Agents Intensive 2026 — Agents for Good</b>
 
 ---
 
