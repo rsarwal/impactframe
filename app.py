@@ -10,11 +10,18 @@ import os
 import time
 from pathlib import Path
 from dotenv import load_dotenv
+st.markdown("""
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&display=swap" rel="stylesheet">
+<style>
+    details > summary { font-size: 16px !important; font-weight: 600 !important; color: #1E2D4E !important; }
+    details > summary p { font-size: 16px !important; font-weight: 600 !important; }
+</style>
+""", unsafe_allow_html=True)
 
 load_dotenv()
 
 sys.path.insert(0, str(Path(__file__).parent))
-from agents.pipeline import run_pipeline
+from adk_pipeline import run_adk_pipeline as run_pipeline
 
 # ── Asset helper ─────────────────────────────────────────────────
 ASSETS = Path(__file__).parent / "assets"
@@ -58,11 +65,17 @@ def section_header(icon_file, title):
     if ico:
         c1, c2 = st.columns([0.05, 0.95])
         with c1:
-            st.image(ico, width=34)
+            st.image(ico, width=54)
         with c2:
-            st.subheader(title)
+            st.markdown(
+                f"<div style='font-size:18px;font-weight:700;color:#1E2D4E;padding-top:10px;'>{title}</div>",
+                unsafe_allow_html=True
+            )
     else:
-        st.subheader(title)
+        st.markdown(
+            f"<div style='font-size:18px;font-weight:700;color:#1E2D4E;'>{title}</div>",
+            unsafe_allow_html=True
+        )
 
 # ── PDF + DOCX export helpers ────────────────────────────────────
 def generate_pdf(data: dict) -> bytes:
@@ -138,17 +151,16 @@ def generate_pdf(data: dict) -> bytes:
         story.append(Spacer(1, 14))
 
         # Allocations
-        story.append(Paragraph("Budget Allocations", h2_style))
+        story.append(Paragraph("Budget Allocation Recommendations", h2_style))
         for prog, rec in recs.items():
-            d = (rec.get("change_direction") or "MAINTAIN").upper()
-            icon = dir_icon(d)
+            conf_pct = int(float(rec.get("confidence", 0)) * 100)
             story.append(Paragraph(
-                f"{icon} {prog} — {fmt_money(rec.get('recommended_amount', 0))} "
+                f" {prog} — {fmt_money(rec.get('recommended_amount', 0))} "
                 f"({fmt_pct(rec.get('recommended_percentage', 0))})", h3_style))
             story.append(Paragraph(rec.get("primary_rationale", ""), body_style))
             if rec.get("human_review_required"):
                 story.append(Paragraph(
-                    f"⚠ Human Review Required: {rec.get('human_review_reason', '')}",
+                    rec.get("human_review_reason", ""),
                     caption_style))
             story.append(Spacer(1, 6))
 
@@ -213,7 +225,7 @@ def generate_docx(data: dict) -> bytes:
         doc.add_paragraph(alloc.get("allocation_summary", ""))
 
         # Allocations
-        doc.add_heading("Budget Allocations", 2)
+        doc.add_heading("Budget Allocation Recommendations", 2)
         for prog, rec in recs.items():
             d = (rec.get("change_direction") or "MAINTAIN").upper()
             h = doc.add_heading(
@@ -285,7 +297,7 @@ with st.sidebar:
         c1, c2 = st.columns([1, 4])
         with c1:
             if ico:
-                st.image(ico, width=22)
+                st.image(ico, width=42)
         with c2:
             st.caption(label)
 
@@ -306,6 +318,27 @@ with st.sidebar:
 
     st.divider()
 
+    # Pipeline run results
+    if "pipeline_meta" in st.session_state and st.session_state.pipeline_meta:
+        meta = st.session_state.pipeline_meta
+        st.markdown("##### 🏥 Riverside Community Health Clinic")
+        st.caption("Serving 12,000 patients annually")
+        st.divider()
+        st.markdown(f"**Total Budget Reviewed**")
+        st.markdown(f"### {meta.get('total_budget', '—')}")
+        st.caption(f"{meta.get('program_count', 0)} programs evaluated")
+        st.divider()
+        st.markdown(f"**Pipeline Run Time**")
+        st.markdown(f"### :orange[~{meta.get('run_time', '?')} seconds]")
+        st.caption(f"5 agents · {meta.get('api_calls', 5)} API calls")
+        st.divider()
+        step_times = meta.get("step_times", {})
+        for i, name in enumerate(["Source Agent","Evidence Agent","Conflict Agent","Confidence Agent","Allocation Agent"], 1):
+            t = f" · {step_times[name]}s" if name in step_times else ""
+            st.markdown(f"{i}. **{name}**")
+            st.caption(f"✓ complete{t}")
+        st.divider()
+
     # API status
     api_key = os.getenv("GOOGLE_API_KEY", "")
     if api_key and api_key != "your_google_api_key_here":
@@ -320,31 +353,124 @@ with st.sidebar:
 # ════════════════════════════════════════════════════════════════
 # MAIN HEADER
 # ════════════════════════════════════════════════════════════════
+# ═══════════════════════════════════════════════════════
+# HEADER
+# ═══════════════════════════════════════════════════════
+
 logo = asset("logo.png")
-if logo:
-    c1, c2 = st.columns([1, 2])
-    with c1:
-        st.image(logo, width=300)
-    with c2:
-        st.markdown("### Multi-Agent AI for Evidence-Based Resource Allocation and Confident Decisions")
-else:
-    st.title("ImpactFrame")
-    st.markdown("### Multi-Agent AI for Evidence-Based Resource Allocation and Confident Decisions")
+
+left, right = st.columns([1.3, 2])
+
+with left:
+    if logo:
+        st.image(logo, width=550)
+
+with right:
+
+    st.markdown("""
+        <div style="
+            font-family:'Libre Baskerville', serif;
+            font-size:48px;
+            font-weight:700;
+            line-height:1.1;
+            margin-bottom:18px;
+        ">
+            <span style="color:#1E2D4E;">Impact</span><span style="color:#E87722;">Frame</span>
+        </div>
+    """, unsafe_allow_html=True)
+
+    st.markdown(
+        """
+        <div style="
+            font-size:25px;
+            font-weight:600;
+            color:#1E2D4E;
+            margin-top:18px;
+            line-height:1.2;
+        ">
+            From Evidence to Action
+        </div>
+
+        <div style="
+            font-size:16px;
+            color:#757575;
+            margin-top:14px;
+            line-height:1.5;
+        ">
+            Transparent recommendations for smarter resource allocation.
+        </div>
+
+        <div style="
+            font-size:15px;
+            font-weight:600;
+            color:#E87722;
+            margin-top:30px;
+            margin-bottom:15px;
+            letter-spacing:0.3px;
+        ">
+            Where Policy, Data and Resources Make Impact
+        </div>
+        """,
+        unsafe_allow_html=True,
+    )
+
+    st.write("")
+
+    
+
+# --- Run controls -----------------------------
+
+title_col, btn_col1, btn_col2 = st.columns(
+    [3, 1.2, 1.2],
+    vertical_alignment="center"
+)
+with title_col:
+    st.markdown("""
+    <div style="
+        font-size:22px;
+        font-weight:500;
+        color:#1E2D4E;
+        margin-top:10px;
+    ">
+        Start Analysis
+    </div>
+    """, unsafe_allow_html=True)
+
+with btn_col1:
+    run_btn = st.button(
+    
+        "▶ Run Analysis ",
+        type="primary",
+        use_container_width=True
+    )
+
+with btn_col2:
+    demo_btn = st.button(
+        " 📂 Load Demo",
+        use_container_width=True
+    )
+st.markdown("""
+<div style="
+font-size:17px;
+color:#5F6368;
+margin-top:10px;
+margin-bottom:20px;
+">
+Upload your data or load the demo dataset to generate transparent,
+evidence-based funding recommendations.
+</div>
+""", unsafe_allow_html=True)
 
 st.divider()
-
-# ── Run controls ─────────────────────────────────────────────────
-c1, c2, c3 = st.columns([3, 1, 1])
-with c2:
-    run_btn = st.button("▶ Run Analysis", type="primary", use_container_width=True)
-with c3:
-    demo_btn = st.button("📂 Load Demo", use_container_width=True)
 
 # ── Session state ─────────────────────────────────────────────────
 if "results" not in st.session_state:
     st.session_state.results = None
+
 if "error" not in st.session_state:
     st.session_state.error = None
+
+
 
 # ── Run pipeline ──────────────────────────────────────────────────
 if run_btn:
@@ -394,6 +520,15 @@ if run_btn:
             with open(output_path, "w") as f:
                 json.dump(results, f, indent=2)
 
+            alloc_tmp = results.get("allocation", {})
+            recs_tmp  = alloc_tmp.get("allocation_recommendations", {})
+            st.session_state.pipeline_meta = {
+                "run_time":      results.get("pipeline_run_time_seconds", "—"),
+                "api_calls":     results.get("api_calls", 5),
+                "step_times":    results.get("step_times", {}),
+                "total_budget":  fmt_money(alloc_tmp.get("total_budget", 0)),
+                "program_count": len(recs_tmp),
+            }
             st.session_state.results = results
             st.success("✅ Analysis complete!")
             time.sleep(1)
@@ -412,6 +547,7 @@ if demo_btn:
     if demo_path.exists():
         with open(demo_path) as f:
             st.session_state.results = json.load(f)
+        st.session_state.pipeline_meta = None
         st.rerun()
     else:
         st.warning("No demo file found. Run the pipeline once first.")
@@ -422,6 +558,20 @@ if demo_btn:
 # ════════════════════════════════════════════════════════════════
 if st.session_state.results:
     r         = st.session_state.results
+
+    _src_labels = {
+        "get_health_data":           "Population Health Data",
+        "get_budget_constraints":    "Budget & Finance Records",
+        "get_survey_results":        "Community Survey Results",
+        "get_program_effectiveness": "Program Effectiveness Report",
+        "population_summary":        "Population Health Data",
+        "budget_summary":            "Budget & Finance Records",
+        "survey_summary":            "Community Survey Results",
+        "effectiveness_summary":     "Program Effectiveness Report",
+        "staff_summary":             "Staff Availability Data",
+    }
+    def friendly_src(s):
+        return _src_labels.get(s, s.replace("_", " ").replace("get ", "").title())
     alloc     = r.get("allocation", {})
     conflicts = r.get("conflicts", {})
     scores    = r.get("scores", {})
@@ -449,52 +599,120 @@ if st.session_state.results:
 
     st.divider()
 
-    # ── Budget Allocations — expandable ─────────────────────────
-    with st.expander("📊 Budget Allocations", expanded=False):
-        section_header("budget.png", "Budget Allocations")
+    with st.expander("💰 Budget Review", expanded=True):
+        st.caption("Evidence-based funding recommendations across all priority programs.")
+        st.write("")
+
         for prog, rec in recs.items():
-            d        = (rec.get("change_direction") or "MAINTAIN").upper()
-            icon     = dir_icon(d)
+
+            d = (rec.get("change_direction") or "MAINTAIN").upper()
+            icon = dir_icon(d)
             conf_pct = int(float(rec.get("confidence", 0)) * 100)
 
-            # Calculate surplus/deficit
-            change     = rec.get("recommended_amount", 0) - rec.get("current_amount", 0)
+            change = rec.get("recommended_amount", 0) - rec.get("current_amount", 0)
             change_abs = abs(int(change))
-            sign       = "+" if change >= 0 else "-"
-            color      = "green" if change >= 0 else "red"
-            label      = "Surplus" if change >= 0 else "Deficit"
 
-            with st.expander(
-                f"{icon} {prog} — {fmt_money(rec.get('recommended_amount', 0))} "
-                f"({fmt_pct(rec.get('recommended_percentage', 0))}) "
-                f"| Confidence: {conf_pct}%",
-                expanded=False
-            ):
+            sign = "+" if change >= 0 else "-"
+            color = "green" if change >= 0 else "red"
+            label = "Funding Adjustment"
+
+            with st.expander(f"{prog} • {fmt_money(rec.get('recommended_amount',0))}"):
+
+                # ---------------- Metrics ----------------
                 ca, cb, cc = st.columns(3)
+
                 with ca:
-                    st.metric("Recommended", fmt_money(rec.get("recommended_amount", 0)))
-                    st.markdown(
-                        f"<p style='font-size:18px;font-weight:bold;color:{color};margin-top:-10px'>"
-                        f"{sign}{fmt_money(change_abs)} {label}</p>",
-                        unsafe_allow_html=True
+                    st.metric(
+                        "Recommended Budget",
+                        fmt_money(rec.get("recommended_amount", 0))
                     )
+
+                    st.markdown(
+                        """
+                        <div style="
+                            color:#5F6368;
+                            font-size:14px;
+                            font-weight:500;
+                            margin-top:8px;
+                            margin-bottom:4px;
+                        ">
+                            Funding Adjustment
+                        </div>
+                        """,
+                        unsafe_allow_html=True,
+                    )   
+
+                    st.markdown(
+                        f"""
+                        <div style="
+                            color:#1E2D4E;
+                            font-size:20px;
+                            font-weight:500;
+                        ">
+                            {sign}{fmt_money(change_abs)}
+                        </div>
+                        """,
+                        unsafe_allow_html=True,
+                    )
+                    
+
+
                 with cb:
-                    st.metric("Current", fmt_money(rec.get("current_amount", 0)))
+                    st.metric(
+                        "Existing Allocation",
+                        fmt_money(rec.get("current_amount", 0))
+                    )
+
                 with cc:
-                    st.metric("Confidence", f"{conf_pct}%")
+                    if conf_pct >= 80:
+                        level = "High"
+                    elif conf_pct >= 60:
+                        level = "Moderate"
+                    else:
+                        level = "Low"
 
-                st.progress(conf_pct / 100)
-                st.markdown(f"**Rationale:** {rec.get('primary_rationale', '')}")
+                    st.markdown("**Data Confidence Score**")
 
+                    st.markdown(
+                        f"""
+                        <div style="font-size:28px;
+                                    font-weight:400;
+                                    color:#1E2D4E;
+                                    line-height:1.1;">
+                            {level}
+                        </div>
+
+                        <div style="
+                            font-size:18px;
+                            color:#6B7280;
+                            margin-top:6px;
+                        ">
+                            {conf_pct}%
+                        </div>
+                        """,
+                        unsafe_allow_html=True,
+                    )                   
+
+
+
+
+# ---------- Rationale ----------
+                st.markdown(
+                    f"**Rationale**\n\n{rec.get('primary_rationale', '')}"
+                )
                 evidence = rec.get("evidence_used", [])
+
                 if evidence:
-                    with st.expander("Evidence used"):
+                    with st.expander("📊 Evidence Summary"):
                         for ev in evidence:
                             st.markdown(f"- {ev}")
+                st.divider()
 
                 if rec.get("human_review_required"):
-                    st.warning(f"⚠️ **Human Review Required:** {rec.get('human_review_reason', '')}")
-
+                    st.info(
+                        f"👤 **Human Review Recommendation**\n\n"
+                        f"{rec.get('human_review_reason', '')}"
+                    )
     st.divider()
 
     # ── Conflicts — expandable, HIGH auto-open ───────────────────
@@ -517,10 +735,10 @@ if st.session_state.results:
 
                     ca, cb = st.columns(2)
                     with ca:
-                        st.markdown(f"**Source: `{c.get('source_a', '')}`**")
+                        st.markdown(f"**Source:** {friendly_src(c.get('source_a', ''))}")
                         st.caption(c.get("source_a_claim", ""))
                     with cb:
-                        st.markdown(f"**Source: `{c.get('source_b', '')}`**")
+                        st.markdown(f"**Source:** {friendly_src(c.get('source_b', ''))}")
                         st.caption(c.get("source_b_claim", ""))
 
                     st.warning(f"👤 **Action Required:** {c.get('recommended_human_action', '')}")
@@ -550,13 +768,13 @@ if st.session_state.results:
                 with cols[i]:
                     score_pct = int(float(sc.get("score", 0)) * 100)
                     grade     = sc.get("grade", "B")
-                    st.metric(
-                        label=src_labels.get(src, src.replace("get_", "").replace("_", " ").title()),
-                        value=f"{grade} {grade_icon(grade)}",
-                        delta=f"{score_pct}%",
-                        delta_color="off"
+                    st.markdown(f"### {grade} {grade_icon(grade)}")
+                    st.markdown(
+                        f"<span style='background:#f0f0f0;padding:2px 8px;"
+                        f"border-radius:10px;font-size:13px;color:#444'>"
+                        f"Score: {score_pct}%</span>",
+                        unsafe_allow_html=True
                     )
-                    st.progress(score_pct / 100)
                     st.caption(sc.get("rationale", ""))
 
         if prog_conf:
@@ -659,9 +877,6 @@ elif st.session_state.error:
     st.error(f"❌ {st.session_state.error}")
 
 else:
-    # ── Empty state ──────────────────────────────────────────────
-    st.markdown("### Press **Run Analysis** to start")
-    st.divider()
 
     # Data source icons
     items = [
@@ -676,8 +891,15 @@ else:
         with col:
             ico = asset(icon_f)
             if ico:
-                st.image(ico, width=70)
-            st.caption(label)
+                import base64
+                img_b64 = base64.b64encode(open(ico, "rb").read()).decode()
+                st.markdown(
+                    f"""<div style="text-align:center;padding:4px 4px;">
+                        <img src="data:image/png;base64,{img_b64}"
+                             style="width:180px;height:180px;object-fit:contain;">
+                    </div>""",
+                    unsafe_allow_html=True
+                )
 
     st.divider()
     st.markdown("#### What happens when you run:")

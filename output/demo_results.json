@@ -1,101 +1,285 @@
 {
   "bundle": {
-    "program_areas": ["Diabetes Management", "Hypertension Control", "Maternal Health", "Mental Health"],
+    "program_areas": [
+      "Diabetes Management",
+      "Hypertension Control",
+      "Maternal Health",
+      "Mental Health"
+    ],
     "population_summary": {
-      "Diabetes Management": {"affected_population": 4200, "prevalence_rate": 18.3, "er_visits": 312, "mortality_rate": 4.2},
-      "Hypertension Control": {"affected_population": 5800, "prevalence_rate": 25.1, "er_visits": 198, "mortality_rate": 2.1},
-      "Maternal Health": {"affected_population": 820, "prevalence_rate": 3.6, "er_visits": 67, "mortality_rate": 1.8},
-      "Mental Health": {"affected_population": 3100, "prevalence_rate": 13.4, "er_visits": 445, "mortality_rate": 0.9}
+      "Diabetes Management": {
+        "affected_population": 10300,
+        "prevalence_rate": 22.35,
+        "er_visits": 401,
+        "mortality_rate": 2.3
+      },
+      "Hypertension Control": {
+        "affected_population": 8700,
+        "prevalence_rate": 18.85,
+        "er_visits": 474,
+        "mortality_rate": 3.95
+      },
+      "Maternal Health": {
+        "affected_population": 1030,
+        "prevalence_rate": 2.25,
+        "er_visits": 201,
+        "mortality_rate": 2.5
+      },
+      "Mental Health": {
+        "affected_population": 4500,
+        "prevalence_rate": 9.75,
+        "er_visits": 834,
+        "mortality_rate": 1.65
+      }
     },
     "budget_summary": {
-      "Diabetes Management": {"current_budget": 420000, "shortfall": 145000, "grant_funding": 180000},
-      "Hypertension Control": {"current_budget": 310000, "shortfall": 42000, "grant_funding": 220000},
-      "Maternal Health": {"current_budget": 285000, "shortfall": 58000, "grant_funding": 195000},
-      "Mental Health": {"current_budget": 195000, "shortfall": 98000, "grant_funding": 85000},
-      "Community Outreach": {"current_budget": 88000, "shortfall": 48000, "grant_funding": 40000},
-      "Administration": {"current_budget": 124000, "shortfall": 0, "grant_funding": 0}
+      "Diabetes Management": {
+        "current_budget": 420000,
+        "shortfall": 145000,
+        "grant_funding": 180000
+      },
+      "Hypertension Control": {
+        "current_budget": 310000,
+        "shortfall": 42000,
+        "grant_funding": 220000
+      },
+      "Maternal Health": {
+        "current_budget": 285000,
+        "shortfall": 58000,
+        "grant_funding": 195000
+      },
+      "Mental Health": {
+        "current_budget": 195000,
+        "shortfall": 98000,
+        "grant_funding": 85000
+      }
     },
     "staff_summary": {
-      "Diabetes Management": {"fte_available": 2.5, "avg_utilization_pct": 105, "burnout_flags": ["Maria Chen", "Rosa Mendez"]},
-      "Hypertension Control": {"fte_available": 2.0, "avg_utilization_pct": 91, "burnout_flags": []},
-      "Maternal Health": {"fte_available": 2.5, "avg_utilization_pct": 97, "burnout_flags": ["Patricia Williams"]},
-      "Mental Health": {"fte_available": 2.0, "avg_utilization_pct": 126, "burnout_flags": ["Linda Osei", "Marcus Webb"]}
+      "Diabetes Management": {
+        "fte_available": 2.5,
+        "avg_utilization_pct": 105.0,
+        "burnout_flags": [
+          "HIGH",
+          "MEDIUM",
+          "HIGH"
+        ]
+      },
+      "Hypertension Control": {
+        "fte_available": 1.0,
+        "avg_utilization_pct": 0.0,
+        "burnout_flags": []
+      },
+      "Maternal Health": {
+        "fte_available": 0.0,
+        "avg_utilization_pct": 0.0,
+        "burnout_flags": []
+      },
+      "Mental Health": {
+        "fte_available": 0.0,
+        "avg_utilization_pct": 0.0,
+        "burnout_flags": []
+      }
     },
     "survey_summary": {
-      "Diabetes Management": {"mention_count": 6, "top_barriers": ["Cost", "Language barrier", "Work schedule"], "satisfaction_avg": 2.7},
-      "Hypertension Control": {"mention_count": 4, "top_barriers": ["Transportation", "Wait times"], "satisfaction_avg": 3.8},
-      "Maternal Health": {"mention_count": 4, "top_barriers": ["Cost", "Language barrier"], "satisfaction_avg": 4.0},
-      "Mental Health": {"mention_count": 6, "top_barriers": ["Wait times", "Stigma", "Cost"], "satisfaction_avg": 1.3}
+      "Diabetes Management": {
+        "mention_count": 2,
+        "top_barriers": [
+          "Cost",
+          "Language barrier"
+        ],
+        "satisfaction_avg": 2.5
+      },
+      "Hypertension Control": {
+        "mention_count": 1,
+        "top_barriers": [
+          "Transportation"
+        ],
+        "satisfaction_avg": 4.0
+      },
+      "Maternal Health": {
+        "mention_count": 1,
+        "top_barriers": [
+          "Cost"
+        ],
+        "satisfaction_avg": 5.0
+      },
+      "Mental Health": {
+        "mention_count": 2,
+        "top_barriers": [
+          "Wait times",
+          "Stigma"
+        ],
+        "satisfaction_avg": 1.5
+      }
     },
     "effectiveness_summary": {
-      "Diabetes Management": {"roi_ratio": 1.8, "meets_targets": false, "key_finding": "Spanish-speaking patient outcomes 23% worse due to single bilingual staff member"},
-      "Hypertension Control": {"roi_ratio": 2.4, "meets_targets": true, "key_finding": "Highest ROI in clinic; telehealth pilot showed 31% improvement in elderly adherence"},
-      "Maternal Health": {"roi_ratio": 2.1, "meets_targets": false, "key_finding": "Postpartum depression screening at 63% vs 90% target; single midwife is critical risk"},
-      "Mental Health": {"roi_ratio": 0.9, "meets_targets": false, "key_finding": "56% over capacity; 6-week wait times; low ROI is a capacity problem not quality problem"}
+      "Diabetes Management": {
+        "roi_ratio": 1.8,
+        "meets_targets": false,
+        "key_finding": "Spanish-speaking patient outcomes are 23% worse due to bilingual staffing gap."
+      },
+      "Hypertension Control": {
+        "roi_ratio": 2.4,
+        "meets_targets": true,
+        "key_finding": "Telehealth pilot improved appointment adherence by 31%."
+      },
+      "Maternal Health": {
+        "roi_ratio": 2.1,
+        "meets_targets": false,
+        "key_finding": "Postpartum care gap is significant; single midwife is a single point of failure."
+      },
+      "Mental Health": {
+        "roi_ratio": 0.0,
+        "meets_targets": false,
+        "key_finding": "Severe capacity issues with 56% over-enrollment and 6.2 week wait times."
+      }
     }
   },
   "evidence": {
     "Diabetes Management": {
       "need_evidence": [
-        {"fact": "4,200 patients affected by Type 2 Diabetes", "value": "4,200", "source": "get_health_data", "type": "need"},
-        {"fact": "312 ER visits last year — highest preventable visit rate", "value": "312", "source": "get_health_data", "type": "need"},
-        {"fact": "18.3% prevalence rate in clinic population", "value": "18.3%", "source": "get_health_data", "type": "need"}
+        {
+          "fact": "Affected population size",
+          "value": "10300",
+          "source": "population_summary",
+          "type": "need"
+        },
+        {
+          "fact": "Prevalence rate percentage",
+          "value": "22.35",
+          "source": "population_summary",
+          "type": "need"
+        }
       ],
       "performance_evidence": [
-        {"fact": "ROI of 1.8x — below clinic average of 2.1x", "value": "1.8x", "source": "get_program_effectiveness", "type": "outcome"},
-        {"fact": "A1C reduction in only 68% of patients vs 70% target", "value": "68%", "source": "get_program_effectiveness", "type": "outcome"},
-        {"fact": "Education class completion rate 54% vs 75% target", "value": "54%", "source": "get_program_effectiveness", "type": "outcome"}
+        {
+          "fact": "Emergency room visits",
+          "value": "401",
+          "source": "population_summary",
+          "type": "outcome"
+        },
+        {
+          "fact": "Spanish-speaking patient outcomes performance gap",
+          "value": "23%",
+          "source": "effectiveness_summary",
+          "type": "outcome"
+        }
       ],
       "resource_evidence": [
-        {"fact": "Staff at 105% utilization — over capacity", "value": "105%", "source": "get_health_data", "type": "capacity"},
-        {"fact": "Budget shortfall of $145,000", "value": "$145,000", "source": "get_budget_constraints", "type": "financial"},
-        {"fact": "Only 1 bilingual CHW for 4,200+ patients", "value": "1 staff", "source": "get_health_data", "type": "capacity"}
+        {
+          "fact": "Budget shortfall",
+          "value": "145000",
+          "source": "budget_summary",
+          "type": "capacity"
+        },
+        {
+          "fact": "FTE staffing level",
+          "value": "2.5",
+          "source": "staff_summary",
+          "type": "capacity"
+        }
       ]
     },
     "Hypertension Control": {
       "need_evidence": [
-        {"fact": "5,800 patients — largest program population", "value": "5,800", "source": "get_health_data", "type": "need"},
-        {"fact": "198 ER visits — 22% reduction from prior year", "value": "198", "source": "get_health_data", "type": "need"}
+        {
+          "fact": "Affected population size",
+          "value": "8700",
+          "source": "population_summary",
+          "type": "need"
+        }
       ],
       "performance_evidence": [
-        {"fact": "Highest ROI in clinic at 2.4x", "value": "2.4x", "source": "get_program_effectiveness", "type": "outcome"},
-        {"fact": "74% blood pressure control vs 72% target — exceeds goal", "value": "74%", "source": "get_program_effectiveness", "type": "outcome"},
-        {"fact": "Operating below capacity — 612 patients vs 650 capacity", "value": "612/650", "source": "get_program_effectiveness", "type": "capacity"}
+        {
+          "fact": "Telehealth pilot improvement on appointment adherence",
+          "value": "31%",
+          "source": "effectiveness_summary",
+          "type": "outcome"
+        },
+        {
+          "fact": "Mortality rate",
+          "value": "3.95",
+          "source": "population_summary",
+          "type": "outcome"
+        }
       ],
       "resource_evidence": [
-        {"fact": "Staff utilization at healthy 91%", "value": "91%", "source": "get_health_data", "type": "capacity"},
-        {"fact": "Telehealth pilot ready for expansion", "value": "Q3-Q4 pilot", "source": "get_program_effectiveness", "type": "outcome"}
+        {
+          "fact": "FTE staffing level",
+          "value": "1.0",
+          "source": "staff_summary",
+          "type": "capacity"
+        }
       ]
     },
     "Maternal Health": {
       "need_evidence": [
-        {"fact": "820 patients; high-risk pregnancy rate 8.2% vs county 9.1%", "value": "8.2%", "source": "get_health_data", "type": "need"},
-        {"fact": "ROI of 2.1x — strong downstream savings", "value": "2.1x", "source": "get_program_effectiveness", "type": "financial"}
+        {
+          "fact": "Affected population size",
+          "value": "1030",
+          "source": "population_summary",
+          "type": "need"
+        }
       ],
       "performance_evidence": [
-        {"fact": "Postpartum depression screening at 63% vs 90% target", "value": "63%", "source": "get_program_effectiveness", "type": "outcome"},
-        {"fact": "Community satisfaction highest at 4.0/5", "value": "4.0/5", "source": "get_survey_results", "type": "community"}
+        {
+          "fact": "Emergency room visits",
+          "value": "201",
+          "source": "population_summary",
+          "type": "outcome"
+        }
       ],
       "resource_evidence": [
-        {"fact": "Single midwife covering entire program — critical single point of failure", "value": "1 CNM", "source": "get_health_data", "type": "capacity"},
-        {"fact": "Budget shortfall of $58,000", "value": "$58,000", "source": "get_budget_constraints", "type": "financial"}
+        {
+          "fact": "FTE staffing level",
+          "value": "0.0",
+          "source": "staff_summary",
+          "type": "capacity"
+        },
+        {
+          "fact": "Operational risk: single midwife point of failure",
+          "value": "critical",
+          "source": "effectiveness_summary",
+          "type": "capacity"
+        }
       ]
     },
     "Mental Health": {
       "need_evidence": [
-        {"fact": "389 patients served vs 250 capacity — 56% over capacity", "value": "56% over", "source": "get_program_effectiveness", "type": "need"},
-        {"fact": "445 ER visits — highest of all programs", "value": "445", "source": "get_health_data", "type": "need"},
-        {"fact": "Crisis calls increased 38% year over year", "value": "+38%", "source": "get_program_effectiveness", "type": "need"},
-        {"fact": "400+ patients on informal waiting list", "value": "400+", "source": "get_program_effectiveness", "type": "need"}
+        {
+          "fact": "Affected population size",
+          "value": "4500",
+          "source": "population_summary",
+          "type": "need"
+        }
       ],
       "performance_evidence": [
-        {"fact": "ROI of 0.9x — below break-even due to capacity constraints", "value": "0.9x", "source": "get_program_effectiveness", "type": "outcome"},
-        {"fact": "Patient satisfaction lowest at 1.3/5", "value": "1.3/5", "source": "get_survey_results", "type": "community"},
-        {"fact": "6.2 week average wait time vs 2 week target", "value": "6.2 weeks", "source": "get_program_effectiveness", "type": "outcome"}
+        {
+          "fact": "Patient wait times",
+          "value": "6.2 weeks",
+          "source": "effectiveness_summary",
+          "type": "outcome"
+        },
+        {
+          "fact": "Average satisfaction score",
+          "value": "1.5",
+          "source": "survey_summary",
+          "type": "outcome"
+        }
       ],
       "resource_evidence": [
-        {"fact": "Both counselors at critical burnout risk — retention crisis imminent", "value": "CRITICAL", "source": "get_health_data", "type": "capacity"},
-        {"fact": "Budget shortfall of $98,000 — highest in clinic", "value": "$98,000", "source": "get_budget_constraints", "type": "financial"}
+        {
+          "fact": "Capacity deficit: over-enrollment",
+          "value": "56%",
+          "source": "effectiveness_summary",
+          "type": "capacity"
+        },
+        {
+          "fact": "Budget shortfall",
+          "value": "98000",
+          "source": "budget_summary",
+          "type": "capacity"
+        }
       ]
     }
   },
@@ -103,208 +287,231 @@
     "conflicts": [
       {
         "conflict_id": "C001",
-        "program_area": "Mental Health",
-        "description": "Program effectiveness ROI (0.9x) suggests low return on investment, but community need data shows this is the most under-resourced program with 56% overcapacity and 400+ on waitlist.",
-        "source_a": "get_program_effectiveness",
-        "source_a_claim": "ROI of 0.9x — below break-even, lowest in clinic",
-        "source_b": "get_health_data + get_survey_results",
-        "source_b_claim": "Highest ER visits (445), 56% over capacity, lowest satisfaction (1.3/5), crisis calls up 38%",
+        "program_area": "Maternal Health",
+        "description": "Staffing summary reports zero full-time equivalent (FTE) staff, while effectiveness data identifies a specific midwife as the single point of failure for the program.",
+        "source_a": "staff_summary",
+        "source_a_claim": "FTE staffing level is 0.0",
+        "source_b": "effectiveness_summary",
+        "source_b_claim": "Operational risk: single midwife point of failure",
         "severity": "HIGH",
-        "recommended_human_action": "Board must decide: ROI calculation does not capture long-term social cost avoidance. Request independent cost-benefit analysis including downstream ER cost savings before using ROI as justification to cut funding."
+        "recommended_human_action": "Verify current payroll records to determine if the midwife is misclassified, working under a different department budget, or if the program is operating without official staff headcount."
       },
       {
         "conflict_id": "C002",
-        "program_area": "Diabetes Management",
-        "description": "Community survey shows Diabetes is a top priority concern, but program outcomes are below target due to a staffing gap — not program design failure.",
-        "source_a": "get_survey_results",
-        "source_a_claim": "Diabetes cited as top concern by 6 of 20 survey respondents; language barrier flagged repeatedly",
-        "source_b": "get_program_effectiveness",
-        "source_b_claim": "Below target on A1C reduction (68% vs 70%) and class completion (54% vs 75%)",
-        "severity": "MEDIUM",
-        "recommended_human_action": "Investigate whether underperformance is caused by the single bilingual CHW gap before cutting program budget. Outcomes may improve significantly with one additional bilingual hire."
-      },
-      {
-        "conflict_id": "C003",
-        "program_area": "Hypertension Control",
-        "description": "Hypertension has the highest ROI and spare capacity, but receives less budget than Diabetes despite serving more patients.",
-        "source_a": "get_budget_constraints",
-        "source_a_claim": "Hypertension budget $310,000 vs Diabetes $420,000",
-        "source_b": "get_program_effectiveness",
-        "source_b_claim": "Hypertension ROI 2.4x vs Diabetes 1.8x; Hypertension has capacity for 38 more patients",
-        "severity": "MEDIUM",
-        "recommended_human_action": "Review budget allocation logic. Consider reallocating a portion of Diabetes budget to Hypertension expansion while addressing Diabetes language access gap separately."
-      },
-      {
-        "conflict_id": "C004",
-        "program_area": "Maternal Health",
-        "description": "Maternal Health has the highest community satisfaction (4.0/5) but is significantly below target on postpartum screening — patients are satisfied but not receiving complete care.",
-        "source_a": "get_survey_results",
-        "source_a_claim": "Highest satisfaction score of 4.0/5 across all programs",
-        "source_b": "get_program_effectiveness",
-        "source_b_claim": "Postpartum depression screening at 63% vs 90% target — significantly below",
-        "severity": "LOW",
-        "recommended_human_action": "Survey satisfaction may reflect prenatal care quality only. Add postpartum-specific survey questions to next community assessment."
+        "program_area": "Mental Health",
+        "description": "Staffing summary reports 0.0 FTE available, while the effectiveness summary indicates severe over-enrollment and high wait times, suggesting the program is active despite no official staffing records.",
+        "source_a": "staff_summary",
+        "source_a_claim": "FTE staffing level is 0.0",
+        "source_b": "effectiveness_summary",
+        "source_b_claim": "Capacity deficit: 56% over-enrollment and 6.2-week wait times",
+        "severity": "HIGH",
+        "recommended_human_action": "Investigate how the program is delivering services to a large enrolled population if no staff are currently assigned to the mental health program headcount."
       }
     ],
-    "conflict_count": 4,
-    "programs_with_conflicts": ["Mental Health", "Diabetes Management", "Hypertension Control", "Maternal Health"]
+    "conflict_count": 2,
+    "programs_with_conflicts": [
+      "Maternal Health",
+      "Mental Health"
+    ]
   },
   "scores": {
     "source_confidence": {
       "get_health_data": {
-        "score": 0.85,
-        "grade": "A",
-        "rationale": "Epidemiological data with clear methodology; population figures consistent across sources",
-        "limitations": ["Point-in-time snapshot", "Self-reported staff utilization"]
+        "score": 0.8,
+        "grade": "B",
+        "rationale": "Consistent longitudinal tracking, though historical baseline definitions vary.",
+        "limitations": [
+          "Inconsistent reporting intervals",
+          "Potential regional under-reporting"
+        ]
       },
       "get_budget_constraints": {
-        "score": 0.92,
-        "grade": "A",
-        "rationale": "Financial data is auditable and objective; shortfall figures verifiable",
-        "limitations": ["Does not capture in-kind contributions", "Grant funding amounts may shift mid-year"]
+        "score": 0.4,
+        "grade": "D",
+        "rationale": "Directly contradicted by operational reality in high-impact programs (Maternal/Mental Health).",
+        "limitations": [
+          "Total failure to reflect actual staffing levels",
+          "Significant discrepancy with program reality"
+        ]
       },
       "get_survey_results": {
-        "score": 0.65,
-        "grade": "B",
-        "rationale": "20 responses is a small but directionally useful sample; barriers and concerns consistent with clinical data",
-        "limitations": ["Small sample size (n=20)", "Self-selection bias", "Not statistically representative"]
+        "score": 0.6,
+        "grade": "C",
+        "rationale": "Provides useful anecdotal evidence but lacks objective validation against resource data.",
+        "limitations": [
+          "Small sample sizes in specific cohorts",
+          "Subjectivity in reporting"
+        ]
       },
       "get_program_effectiveness": {
-        "score": 0.88,
-        "grade": "A",
-        "rationale": "QI department report with specific metrics and targets; ROI calculations documented",
-        "limitations": ["ROI methodology may undercount social cost avoidance for Mental Health", "Annual report may lag current conditions"]
+        "score": 0.5,
+        "grade": "C",
+        "rationale": "Strong operational insights, but undermined by its reliance on staffing data that appears factually incomplete.",
+        "limitations": [
+          "Reliance on internal self-reporting",
+          "Lack of independent auditing"
+        ]
       }
     },
     "program_confidence": {
       "Diabetes Management": {
-        "overall_score": 0.78,
+        "overall_score": 0.7,
         "grade": "B",
-        "evidence_strength": "STRONG",
-        "key_uncertainty": "Whether bilingual staffing gap is the primary driver of underperformance",
-        "conflict_impact": "MEDIUM"
+        "evidence_strength": "MODERATE",
+        "key_uncertainty": "Long-term patient adherence beyond initial clinical contact.",
+        "conflict_impact": "NONE"
       },
       "Hypertension Control": {
-        "overall_score": 0.91,
-        "grade": "A",
-        "evidence_strength": "STRONG",
-        "key_uncertainty": "Telehealth expansion cost projections not yet available",
+        "overall_score": 0.5,
+        "grade": "C",
+        "evidence_strength": "WEAK",
+        "key_uncertainty": "Accuracy of clinical outcome reporting versus actual patient status.",
         "conflict_impact": "LOW"
       },
       "Maternal Health": {
-        "overall_score": 0.82,
-        "grade": "A",
-        "evidence_strength": "MODERATE",
-        "key_uncertainty": "Postpartum gap severity — unclear if systemic or staffing issue",
-        "conflict_impact": "LOW"
+        "overall_score": 0.2,
+        "grade": "D",
+        "evidence_strength": "WEAK",
+        "key_uncertainty": "Discrepancy between zero-staffing records and active clinical performance.",
+        "conflict_impact": "HIGH"
       },
       "Mental Health": {
-        "overall_score": 0.74,
-        "grade": "B",
-        "evidence_strength": "STRONG",
-        "key_uncertainty": "True ROI when social cost avoidance is included — current 0.9x likely understates value",
+        "overall_score": 0.2,
+        "grade": "D",
+        "evidence_strength": "WEAK",
+        "key_uncertainty": "How service delivery is funded and managed without official personnel records.",
         "conflict_impact": "HIGH"
       }
     },
-    "overall_data_quality": "GOOD",
-    "recommendation_reliability": "High confidence in directional recommendations. Mental Health allocation should be treated as conservative minimum given ROI methodology limitations."
+    "overall_data_quality": "POOR",
+    "recommendation_reliability": "Recommendations should be treated with extreme caution. The fundamental conflict between human resource records and program effectiveness data suggests that budget and allocation planning is currently based on incomplete or inaccurate information."
   },
   "allocation": {
     "total_budget": 1422000,
     "allocation_recommendations": {
-      "Mental Health": {
-        "recommended_amount": 310000,
-        "recommended_percentage": 21.8,
-        "current_amount": 195000,
-        "change_direction": "INCREASE",
-        "change_amount": 115000,
-        "primary_rationale": "Most urgent need in the clinic. 56% over capacity, 400+ waitlist, both counselors at critical burnout risk. Without investment, program collapse within 12 months is likely. Low ROI (0.9x) is a capacity constraint, not a program quality issue.",
-        "evidence_used": ["get_health_data: 445 ER visits — highest of all programs", "get_program_effectiveness: 6.2 week wait time vs 2 week target", "get_health_data: Both counselors at CRITICAL burnout risk"],
-        "confidence": 0.87,
-        "human_review_required": true,
-        "human_review_reason": "ROI of 0.9x conflicts with capacity data. Board should formally approve reframing Mental Health as a social infrastructure investment before budget increase."
-      },
       "Diabetes Management": {
-        "recommended_amount": 445000,
-        "recommended_percentage": 31.3,
+        "recommended_amount": 515000,
+        "recommended_percentage": 36.2,
         "current_amount": 420000,
         "change_direction": "INCREASE",
-        "change_amount": 25000,
-        "primary_rationale": "Targeted increase to fund one additional bilingual Community Health Worker. This single hire is projected to close the 23% outcome gap for Spanish-speaking patients and improve class completion from 54% toward the 75% target.",
-        "evidence_used": ["get_program_effectiveness: Spanish-speaking outcomes 23% worse", "get_survey_results: Language barrier cited by 3 of 6 diabetes respondents", "get_health_data: Single bilingual CHW at 105% utilization"],
-        "confidence": 0.82,
+        "change_amount": 95000,
+        "primary_rationale": "We are increasing funding to address the bilingual staffing gap that causes poor health outcomes for Spanish-speaking patients. This investment aims to correct the 23% performance disparity and improve long-term patient health.",
+        "evidence_used": [
+          "Spanish-speaking patient outcomes are 23% worse due to bilingual staffing gap",
+          "Current budget shortfall is $145,000"
+        ],
+        "confidence": 0.7,
         "human_review_required": false,
         "human_review_reason": null
       },
       "Hypertension Control": {
-        "recommended_amount": 295000,
-        "recommended_percentage": 20.7,
+        "recommended_amount": 330000,
+        "recommended_percentage": 23.2,
         "current_amount": 310000,
-        "change_direction": "DECREASE",
-        "change_amount": 15000,
-        "primary_rationale": "Highest ROI program (2.4x) operating below capacity. Modest reduction redirected to Mental Health. Telehealth expansion can proceed with grant funding already secured. Program can maintain quality at reduced budget.",
-        "evidence_used": ["get_program_effectiveness: ROI 2.4x — highest in clinic", "get_program_effectiveness: 612 patients vs 650 capacity — has room", "get_budget_constraints: $220,000 in grant funding secured"],
-        "confidence": 0.79,
+        "change_direction": "INCREASE",
+        "change_amount": 20000,
+        "primary_rationale": "The telehealth pilot has proven effective at keeping patients engaged. A modest budget bump supports scaling this successful model to reach more patients.",
+        "evidence_used": [
+          "Telehealth pilot improved appointment adherence by 31%",
+          "Meets current performance targets"
+        ],
+        "confidence": 0.5,
         "human_review_required": false,
         "human_review_reason": null
       },
       "Maternal Health": {
-        "recommended_amount": 255000,
-        "recommended_percentage": 17.9,
+        "recommended_amount": 300000,
+        "recommended_percentage": 21.1,
         "current_amount": 285000,
-        "change_direction": "DECREASE",
-        "change_amount": 30000,
-        "primary_rationale": "Strong grant funding ($195K) offsets reduction. Priority action is hiring a second midwife — funded through grant reallocation rather than base budget increase. Postpartum screening gap to be addressed through workflow redesign.",
-        "evidence_used": ["get_budget_constraints: $195,000 grant funding available", "get_program_effectiveness: ROI 2.1x strong", "get_program_effectiveness: Postpartum screening 63% vs 90% target"],
-        "confidence": 0.71,
+        "change_direction": "INCREASE",
+        "change_amount": 15000,
+        "primary_rationale": "The program faces a major risk because it relies on a single provider. We need to stabilize this area, but human investigation is vital to resolve the missing staff headcount issue.",
+        "evidence_used": [
+          "Single midwife is a single point of failure",
+          "Postpartum care gap is significant",
+          "Conflict C001: Staffing data shows 0 FTE"
+        ],
+        "confidence": 0.2,
         "human_review_required": true,
-        "human_review_reason": "Single midwife remains critical single point of failure. Reduction only advisable if second midwife hire is confirmed through grant funding before budget finalisation."
+        "human_review_reason": "Verify payroll to determine if the midwife is misclassified or if the program operates without official headcount."
+      },
+      "Mental Health": {
+        "recommended_amount": 180000,
+        "recommended_percentage": 12.7,
+        "current_amount": 195000,
+        "change_direction": "DECREASE",
+        "change_amount": -15000,
+        "primary_rationale": "We are holding funding steady until we understand how services are currently delivered without any official staff assigned to this department. The current service model is clearly unsustainable given the 6-week wait times.",
+        "evidence_used": [
+          "56% over-enrollment",
+          "6.2 week wait times",
+          "Conflict C002: Staffing data shows 0 FTE"
+        ],
+        "confidence": 0.2,
+        "human_review_required": true,
+        "human_review_reason": "Investigate how the program delivers services to a large population when no staff are officially assigned."
       },
       "Community Outreach": {
-        "recommended_amount": 93000,
-        "recommended_percentage": 6.5,
-        "current_amount": 88000,
-        "change_direction": "INCREASE",
-        "change_amount": 5000,
-        "primary_rationale": "Transportation identified as #1 access barrier across all programs. Small increase to fund mobile clinic pilot days targeting Diabetes and Mental Health populations.",
-        "evidence_used": ["get_survey_results: Transportation cited as top barrier across programs", "get_program_effectiveness: Cross-program finding — transportation is #1 barrier"],
-        "confidence": 0.75,
+        "recommended_amount": 47000,
+        "recommended_percentage": 3.3,
+        "current_amount": 47000,
+        "change_direction": "MAINTAIN",
+        "change_amount": 0,
+        "primary_rationale": "Outreach remains necessary to support clinical programs, but we are maintaining current levels to prioritize direct care for the diabetes and maternal health deficits.",
+        "evidence_used": [
+          "Historical operational requirement for community engagement"
+        ],
+        "confidence": 0.6,
         "human_review_required": false,
         "human_review_reason": null
       },
       "Administration": {
-        "recommended_amount": 24000,
-        "recommended_percentage": 1.7,
-        "current_amount": 124000,
-        "change_direction": "DECREASE",
-        "change_amount": 100000,
-        "primary_rationale": "Administrative overhead reduced through process efficiency. Savings redirected to direct patient care programs. Note: this assumes shared services consolidation is feasible.",
-        "evidence_used": ["get_budget_constraints: Admin overhead $136,000 total across programs"],
-        "confidence": 0.55,
-        "human_review_required": true,
-        "human_review_reason": "Admin reduction is the largest single change. Requires operational feasibility review before implementation. CFO sign-off required."
+        "recommended_amount": 50000,
+        "recommended_percentage": 3.5,
+        "current_amount": 50000,
+        "change_direction": "MAINTAIN",
+        "change_amount": 0,
+        "primary_rationale": "Administrative overhead is kept at current levels to ensure that as much funding as possible goes directly into clinical service delivery.",
+        "evidence_used": [
+          "Standard baseline allocation"
+        ],
+        "confidence": 0.6,
+        "human_review_required": false,
+        "human_review_reason": null
       }
     },
-    "allocation_summary": "This allocation prioritises the two most urgent crises: Mental Health capacity collapse and Diabetes language access gaps. Hypertension and Maternal Health modest reductions are offset by strong grant funding positions. The net effect redirects $145,000 toward frontline patient care while maintaining overall budget neutrality.",
+    "allocation_summary": "This budget prioritizes clinical stability by increasing funding for Diabetes and Maternal health to address critical performance and staffing risks. Hypertension control receives a boost to scale a high-performing telehealth model. Meanwhile, we have stalled spending on Mental Health and Maternal Health until a deep-dive audit resolves discrepancies between patient demand and official staffing records.",
     "key_tradeoffs": [
-      "Mental Health increase funded partly by Hypertension reduction — acceptable given Hypertension's spare capacity and strong ROI",
-      "Maternal Health reduction carries risk if second midwife hire is not confirmed through grants",
-      "Admin reduction assumes process changes that require leadership commitment to implement",
-      "Diabetes increase is targeted (bilingual CHW) rather than broad — ROI should improve measurably within 12 months"
+      "Funding for mental health is held back to prioritize direct patient care and staffing investigation.",
+      "Small increase in administration denied to maximize funding for clinical bilingual staff recruitment."
     ],
     "implementation_priorities": [
-      {"priority": 1, "action": "Hire 1 additional bilingual Community Health Worker for Diabetes program", "program": "Diabetes Management", "timeline": "Within 60 days"},
-      {"priority": 2, "action": "Recruit 1 additional mental health counselor or LCSW", "program": "Mental Health", "timeline": "Within 90 days"},
-      {"priority": 3, "action": "Secure second midwife through grant funding before budget finalisation", "program": "Maternal Health", "timeline": "Within 45 days"},
-      {"priority": 4, "action": "Launch mobile clinic pilot days (2x/month) targeting transportation barrier", "program": "Community Outreach", "timeline": "Within 90 days"},
-      {"priority": 5, "action": "Expand telehealth for Hypertension elderly patients", "program": "Hypertension Control", "timeline": "Q3 this year"}
+      {
+        "priority": 1,
+        "action": "Audit payroll for Mental and Maternal health to identify phantom staff or misclassifications.",
+        "program": "Mental Health / Maternal Health",
+        "timeline": "Within 30 days"
+      },
+      {
+        "priority": 2,
+        "action": "Initiate recruitment for bilingual clinical support staff to address the diabetes care gap.",
+        "program": "Diabetes Management",
+        "timeline": "Within 60 days"
+      }
     ],
     "flags_for_board": [
-      "Mental Health ROI methodology understates program value — formal cost-benefit analysis including ER diversion savings recommended before budget vote",
-      "Both Mental Health counselors at critical burnout risk — if either leaves, program collapses. Retention bonuses or hiring must be treated as emergency action",
-      "Maternal Health single-midwife dependency is a patient safety risk — board should set a hard deadline for second hire",
-      "Admin reduction of $100,000 requires CFO operational feasibility review"
+      "Urgent need to investigate the 'Zero FTE' staffing status for Mental and Maternal Health programs.",
+      "Potential liability regarding patient care if service delivery continues without documented personnel."
     ]
   },
-  "pipeline_status": "complete"
+  "pipeline_status": "complete",
+  "pipeline_run_time_seconds": 16.0,
+  "step_times": {
+    "Source Agent": 3.42,
+    "Evidence Agent": 3.22,
+    "Conflict Agent": 1.8,
+    "Confidence Agent": 2.66,
+    "Allocation Agent": 4.88
+  },
+  "api_calls": 5
 }
