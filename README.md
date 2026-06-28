@@ -1,14 +1,12 @@
-<p align="left">
-  <img src="assets/logo.png" width="430">
-</p>
-
+<img src="assets/logo.png" width="400"/>
 <h1>ImpactFrame</h1>
-
-<b>Kaggle AI Agents Intensive 2026 — Agents for Good</b>
+<p><strong>Kaggle AI Agents Intensive 2026 — Agents for Good</strong></p>
 
 ---
 
-## What is this?
+---
+
+## What is ImpactFrame?
 
 ImpactFrame is a project I built for the Kaggle 5-Day AI Agents Intensive capstone.
 
