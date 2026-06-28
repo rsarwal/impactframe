@@ -1,3 +1,5 @@
+![ImpactFrame Logo](assets/logo.png)
+
 # ImpactFrame
 
 **Kaggle AI Agents Intensive 2026 — Agents for Good**
@@ -9,6 +11,8 @@
 ImpactFrame is a project I built for the Kaggle 5-Day AI Agents Intensive capstone.
 
 It is a pipeline of 5 AI agents that looks at health program data from multiple sources, finds where the sources disagree with each other, figures out which sources to trust, and recommends how to split a budget across programs.
+
+![Budget Overview](assets/screenshot_overview.png)
 
 ---
 
@@ -22,13 +26,15 @@ That conversation changed what I built.
 
 ---
 
-## What did I notice while building it?
+## What I noticed while building it
 
 The Mental Health program in my demo has the worst numbers on paper — lowest ROI, weakest evidence score. If you just ranked programs by ROI, you would cut it first.
 
 But when you look at why the ROI is low: the program is running at 56% over capacity. Both counselors are at burnout risk. The number looks bad because the program is overwhelmed, not because it is not working.
 
 That is what the conflict detection agent surfaces — the gap between what the data says on the surface and what is actually going on.
+
+![Program Detail](assets/screenshot_detail.png)
 
 ---
 
